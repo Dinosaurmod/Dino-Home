@@ -50,6 +50,9 @@ const MenuBarComponent = function (props) {
                         <li className="menu-bar_language-option" data-language="es-419">
                             Español Latinoamericano
                         </li>
+                        <li className="menu-bar_language-option" data-language="pl">
+                            Polski
+                        </li>
                     </ul>
                 </li>
                 <li className="menu-bar_li">

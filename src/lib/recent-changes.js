@@ -16,7 +16,7 @@ $(document).ready(function () {
   waitForElement('.commit-list', function () {
     console.log('Fetching commits...'); // Debug log
       const org = 'dinosaurmod';
-      const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=14`;
+      const reposUrl = `https://api.github.com/orgs/${org}/repos?per_page=16`;
       let allCommits = [];
 
       $.ajax({
