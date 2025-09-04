@@ -5,6 +5,8 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import SearchBar from './search-bar.jsx';
 
+import languagesArray from './languages-array.js';
+
 import styles from './menu-bar.css';
 
 import moonIcon from './icons/moon.svg';
@@ -31,29 +33,6 @@ const messages = defineMessages({
 
 const MenuBarComponent = function (props) {
     const { intl } = props;
-
-    const languagesArray = [
-        {
-            name: "Deutsch",
-            lang: "de",
-        },
-        {
-            name: "English",
-            lang: "en",
-        },
-        {
-            name: "Español (España)",
-            lang: "es",
-        },
-        {
-            name: "Español Latinoamericano",
-            lang: "es-419",
-        },
-        {
-            name: "Polski",
-            lang: "pl",
-        },
-    ];
 
     return (
         <nav className="menu-bar">
