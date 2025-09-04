@@ -5,7 +5,7 @@ import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import SearchBar from './search-bar.jsx';
 
-import languagesArray from './languages-array.js';
+import languagesArray from './languages-array.jsx';
 
 import styles from './menu-bar.css';
 
