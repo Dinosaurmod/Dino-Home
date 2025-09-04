@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
-import SearchBar from './search-bar.css';
+import SearchBar from './search-bar.jsx';
 
 import styles from './menu-bar.css';
 
