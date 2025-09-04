@@ -30,9 +30,9 @@
     color: white;
     outline: none;
     width: 70%;
-    transform: translate(5%, 0%);
+    transform: translate(4%, 0%);
 }
 
 .searchbar-searchInput::placeholder {
-    color: #ffffff50;
+    color: #ffffff90;
 }
