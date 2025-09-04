@@ -68,7 +68,7 @@ const MenuBarComponent = function (props) {
                         <li className="menu-bar_language-option" data-language="pl">
                             Polski
                         </li>*/}
-                        {/*languagesNodes*/}
+                        {languagesNodes}
                     </ul>
                 </li>
                 <li className="menu-bar_li">
