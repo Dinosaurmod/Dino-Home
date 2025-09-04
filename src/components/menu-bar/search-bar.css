@@ -19,6 +19,7 @@
     width: 32px;
     height: 32px;
     background: transparent;
+    background-color: transparent;
 }
 
 .searchbar-searchInput {
@@ -32,10 +33,12 @@
     transform: translate(5%, 0%);
 }
 
-.dark-mode .searchbar-searchInput::placeholder {
-    color: #757575;
+.dark-mode .searchbar-searchIcon,
+.dark-mode .searchbar-searchInput {
+    background: transparent;
+    background-color: transparent;
 }
 
 .searchbar-searchInput::placeholder {
-    color: rgb(176, 176, 176);
+    color: #ffffff50;
 }
