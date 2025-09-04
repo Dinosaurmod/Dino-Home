@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
+import SearchBar from './search-bar.css';
+
 import styles from './menu-bar.css';
 
 import moonIcon from './icons/moon.svg';
@@ -29,6 +31,39 @@ const messages = defineMessages({
 
 const MenuBarComponent = function (props) {
     const { intl } = props;
+
+    const languageNodes = [];
+    const languagesArray = [
+        {
+            name: "Deutsch",
+            lang: "de",
+        },
+        {
+            name: "English",
+            lang: "en",
+        },
+        {
+            name: "Español (España)",
+            lang: "es",
+        },
+        {
+            name: "Español Latinoamericano",
+            lang: "es-419",
+        },
+        {
+            name: "Polski",
+            lang: "pl",
+        },
+    ];
+
+    languagesArray.forEach(item => {
+        languageNodes.push(
+            <li className="menu-bar_language-option" data-language={item.lang}>
+                {item.name}
+            </li>
+        )
+    });
+
     return (
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
@@ -38,7 +73,7 @@ const MenuBarComponent = function (props) {
                         <img src={dropdownCaretIcon} alt="Dropdown Caret"/>
                     </a>
                     <ul id="languagesDropdown" className="menu-bar_languages-dropdown">
-                        <li className="menu-bar_language-option" data-language="de">
+                        {/*<li className="menu-bar_language-option" data-language="de">
                             Deutsch
                         </li>
                         <li className="menu-bar_language-option" data-language="en">
@@ -52,7 +87,8 @@ const MenuBarComponent = function (props) {
                         </li>
                         <li className="menu-bar_language-option" data-language="pl">
                             Polski
-                        </li>
+                        </li>*/}
+                        {languageNodes}
                     </ul>
                 </li>
                 <li className="menu-bar_li">
@@ -71,8 +107,9 @@ const MenuBarComponent = function (props) {
                     <a className="menu-bar_a" href="https://dinosaurmod.betteruptime.com/">{intl ? intl.formatMessage(messages.statusText) : "Status"}</a>
                 </li>
                 <li className="menu-bar_li">
-                    <button id="menubar_searchIcon">&#128269;</button>
-                    <input type="text" className="menu-bar_input" id="menubar_searchBar" placeholder="Search for projects on PM..."/>
+                    {/*<button id="menubar_searchIcon">&#128269;</button>
+                    <input type="text" className="menu-bar_input" id="menubar_searchBar" placeholder="Search for projects on PM..."/>*/}
+                    <SearchBar />
                 </li>
             </ul>
             <label id="icon">

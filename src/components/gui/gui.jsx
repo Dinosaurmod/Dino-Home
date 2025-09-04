@@ -31,7 +31,7 @@ const GUIComponent = props => {
     const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
 
     return (
-        <div>
+        <React.Fragment>
             <MenuBar
                 intl={intl}
                 {...componentProps}
@@ -79,7 +79,7 @@ const GUIComponent = props => {
                     />
                 </div>
             ))}
-        </div>
+        </React.Fragment>
     )
 }
 
