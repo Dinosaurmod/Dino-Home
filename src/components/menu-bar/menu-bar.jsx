@@ -34,6 +34,16 @@ const messages = defineMessages({
 const MenuBarComponent = function (props) {
     const { intl } = props;
 
+    const languagesNodes = [];
+
+    languagesArray.forEach(item => {
+        languagesNodes.push(
+            <li className="menu-bar_language-option" data-language={item.lang}>
+                {item.name}
+            </li>
+        )
+    });
+
     return (
         <nav className="menu-bar">
             <ul className="menu-bar_ul">
@@ -58,11 +68,7 @@ const MenuBarComponent = function (props) {
                         <li className="menu-bar_language-option" data-language="pl">
                             Polski
                         </li>*/}
-                        {languagesArray.map(item => (
-                            <li className="menu-bar_language-option" data-language={item.lang}>
-                                {item.name}
-                            </li>
-                        ))}
+                        {languagesNodes}
                     </ul>
                 </li>
                 <li className="menu-bar_li">
