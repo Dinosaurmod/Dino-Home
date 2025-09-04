@@ -109,7 +109,9 @@ const MenuBarComponent = function (props) {
                 <li className="menu-bar_li">
                     {/*<button id="menubar_searchIcon">&#128269;</button>
                     <input type="text" className="menu-bar_input" id="menubar_searchBar" placeholder="Search for projects on PM..."/>*/}
-                    <SearchBar />
+                    <SearchBar
+                        intl={intl}
+                    />
                 </li>
             </ul>
             <label id="icon">
