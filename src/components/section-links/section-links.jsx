@@ -12,7 +12,9 @@ const SectionLinksComponent = function (props) {
         intl
     } = props;
     return (
-        <div>
+        <div
+            className="sectionLinks"
+        >
             <ButtonComponent
                 intl={intl}
                 label={'Packager'}
