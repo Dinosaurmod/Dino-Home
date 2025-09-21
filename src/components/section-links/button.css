@@ -16,6 +16,7 @@
     align-items: center;
 }
 .sectionInfoButton:focus {
+    background-color: #8ef335;
     outline-width: 4px;
 }
 .sectionInfoButtonHighlight {
