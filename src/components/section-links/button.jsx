@@ -13,13 +13,13 @@ const ButtonComponent = function (props) {
         link
     } = props;
     return (
-        <button
+        <a
             //onClick={onclick || (() => {})}
             href={link}
             className='sectionInfoButton'
         >
             {label}
-        </button>
+        </a>
     )
 }
 
