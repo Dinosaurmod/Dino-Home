@@ -1,0 +1,37 @@
+.sectionInfoButton {
+    margin: 0.25rem;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 0px;
+    border-radius: 4px;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(146, 239, 24, 0.35);
+    color: white;
+    background-color: #80f41a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sectionInfoButton:focus {
+    outline-width: 4px;
+}
+.sectionInfoButtonHighlight {
+    outline: 0px;
+    background-color: white;
+    color: #80f41a;
+}
+.sectionInfoButtonToggled {
+    background-color: transparent !important;
+    outline-color: rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    color: black;
+    font-weight: normal;
+}
+:global(body.dark-mode) .sectionInfoButtonToggled {
+    outline-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}

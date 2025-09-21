@@ -1,0 +1,11 @@
+.sectionLinks {
+    background: #80f41a28;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: 0px;
+}
