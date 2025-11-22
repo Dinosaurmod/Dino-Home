@@ -2,8 +2,20 @@
     "home.menubar.create": "Entwickeln",
     "home.menubar.examples": "Beispiele",
     "home.menubar.status": "Status",
+    "home.menubar.search": "Suche für projekte auf PM...",
+    "home.section.welcomemessage": "Willkommen zu der Hauptseite von DinosaurMod!",
+    "home.section.examplesmessage": "Willkommen zu der Beispielsseite von DinosaurMod!",
+    "home.section.recentchanges.title": "Neueste Änderungen",
+    "home.section.recentchanges.failmessage": "Irgendwas ist schief geworden..",
+    "home.section.recentchanges.seemore": "Siehe mehr",
     "home.footer.notaffiliated": "DinosaurMod ist nicht mit Scratch, TurboWarp, PenguinMod, dem Scratch Team oder der Scratch Foundation verbunden.",
     "home.footer.website": "Webseite",
-    "home.footer.community": "Community",
-    "home.footer.donate": "Spenden"
+    "home.footer.community": "Gemeinde",
+    "home.footer.donate": "Spenden",
+    "home.footer.row1.editor": "Editor",
+    "home.footer.row1.credits": "Credits",
+    "home.footer.row1.examples": "Beispiele",
+    "home.footer.row1.source": "Quelle",
+    "home.footer.row1.status": "Status",
+    "home.footer.row2.issue": "Über ein Fehler informieren"
 }

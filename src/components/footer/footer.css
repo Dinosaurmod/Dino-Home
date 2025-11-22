@@ -16,8 +16,8 @@
 
 .footer-row {
     margin-bottom: 10px;
-    width: 100%; /* Each row takes the full width */
-    flex: 0 0 30%; /* Adjust the width of each footer-row */
+    width: 100%;
+    flex: 0 0 20%;
 }
 
 .footer-row a {

@@ -13,6 +13,7 @@ import SignUpGui from '../../containers/signup-gui.jsx';
 import SectionLinks from '../../containers/section-links.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
+import Utils from '../../lib/utils';
 
 import DinoClickerThumb from './example-cards/DinoClickerThumb.png';
 import SwearDetectorThumb from './example-cards/SwearDetectorThumb.png';
@@ -20,6 +21,19 @@ import SwearDetectorThumb from './example-cards/SwearDetectorThumb.png';
 import styles from './gui.css';
 
 const pathname = window.location.pathname;
+
+const messages = defineMessages({
+    homePageText: {
+        id: "home.section.welcomemessage",
+        defaultMessage: 'Welcome to the Home Page of DinosaurMod!',
+        description: 'welcome text'
+    },
+    examplesPageText: {
+        id: "home.section.examplesmessage",
+        defaultMessage: 'Welcome to the Examples Page of DinosaurMod!',
+        description: 'examples text'
+    },
+})
 
 const GUIComponent = props => {
     const {
@@ -29,7 +43,6 @@ const GUIComponent = props => {
 
     const isExamplesPage = pathname.includes("examples");
     const isInSignUpPage = pathname.includes("signup");
-    const pText = isExamplesPage ? "Welcome to the Examples Page of DinosaurMod!" : "Welcome to the Home Page of DinosaurMod!";
 
     return (
         <React.Fragment>
@@ -49,7 +62,7 @@ const GUIComponent = props => {
                     />
                     <section>
                         <h1>{BRAND_NAME}</h1>
-                        <p>{pText}</p>
+                        <p>{isExamplesPage ? Utils.formatMessage(messages.homePageText, intl, "Welcome to the Examples Page of DinosaurMod!") : Utils.formatMessage(messages.examplesPageText, intl, "Welcome to the Home Page of DinosaurMod!")}</p>
                     </section>
                     <RecentChanges
                         intl={intl}
