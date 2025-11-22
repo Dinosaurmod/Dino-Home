@@ -23,7 +23,7 @@ const SearchBarComponent = function (props) {
         <React.Fragment>
             <div className="searchbar-main-div">
                 <button class="searchbar-searchIcon" id="searchbar-searchIcon"><svg xmlns="http://www.w3.org/2000/svg" style={{width: "30px", height: "20px", marginBottom:"5px", marginTop: "5px"}} viewBox="0 0 19.9 19.7"><g class="search-path" fill="none" stroke="#ffffff" stroke-width="2px"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button>
-                <input type="text" className="searchbar-searchInput" id="searchbar-searchInput" placeholder={Utils.formatMessage(searchText, intl, "Search for projects on PM...")}/>
+                <input type="text" className="searchbar-searchInput" id="searchbar-searchInput" placeholder={Utils.formatMessage(messages.searchText, intl, "Search for projects on PM...")}/>
             </div>
         </React.Fragment>
     )
