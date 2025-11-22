@@ -15,10 +15,11 @@ import SectionLinks from '../../containers/section-links.jsx';
 import {BRAND_NAME} from '../../lib/brand.js';
 import Utils from '../../lib/utils';
 
-import DinoClickerThumb from './example-cards/DinoClickerThumb.png';
-import SwearDetectorThumb from './example-cards/SwearDetectorThumb.png';
+import exampleCards from '../../lib/example-cards';
 
 import styles from './gui.css';
+
+/* eslint-disable react/no-multi-comp */
 
 const pathname = window.location.pathname;
 
@@ -35,6 +36,24 @@ const messages = defineMessages({
     },
 })
 
+const ExampleCard = props => {
+    const { intl, name, href, iconURL } = props;
+    return (
+        <div className="image-card">
+            <img src={iconURL} alt="Image"/>
+            <h3>{name}</h3>
+            <a href={href}>Try it out!</a>
+        </div>
+    )
+}
+
+ExampleCard.propTypes = {
+    intl: intlShape,
+    name: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    iconURL: PropTypes.any.isRequired,
+}
+
 const GUIComponent = props => {
     const {
         intl,
@@ -43,6 +62,16 @@ const GUIComponent = props => {
 
     const isExamplesPage = pathname.includes("examples");
     const isInSignUpPage = pathname.includes("signup");
+
+    const exampleCardsArray = [];
+
+    exampleCards.forEach(card => {
+        exampleCardsArray.push(<ExampleCard
+            name={card.name}
+            href={card.href}
+            iconURL={card.iconURL}
+        />)
+    });
 
     return (
         <React.Fragment>
@@ -62,7 +91,7 @@ const GUIComponent = props => {
                     />
                     <section>
                         <h1>{BRAND_NAME}</h1>
-                        <p>{isExamplesPage ? Utils.formatMessage(messages.homePageText, intl, "Welcome to the Examples Page of DinosaurMod!") : Utils.formatMessage(messages.examplesPageText, intl, "Welcome to the Home Page of DinosaurMod!")}</p>
+                        <p>{isExamplesPage ? Utils.formatMessage(messages.examplesPageText, intl, "Welcome to the Examples Page of DinosaurMod!") : Utils.formatMessage(messages.homePageText, intl, "Welcome to the Home Page of DinosaurMod!")}</p>
                     </section>
                     <RecentChanges
                         intl={intl}
@@ -71,16 +100,7 @@ const GUIComponent = props => {
                     <Gap size="18px" />
                     {(!!isExamplesPage && (
                         <div className="section-content">
-                            <div className="image-card">
-                                <img src={DinoClickerThumb} alt="Image"/>
-                                <h3>Dino Clicker</h3>
-                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/DinoClicker.dino">Try it out!</a>
-                            </div>
-                            <div className="image-card">
-                                <img src={SwearDetectorThumb} alt="Image"/>
-                                <h3>Swear Detector</h3>
-                                <a href="https://dinosaurmod.github.io/?project_url=https://raw.githubusercontent.com/Dinosaurmod/examples/main/src/dino-files/SwearDetector.dino">Try it out!</a>
-                            </div>
+                            {exampleCardsArray}
                         </div>
                     ))}
                     <FooterCustom
