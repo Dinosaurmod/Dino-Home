@@ -1,16 +1,16 @@
 $(document).ready(function () {
   const waitForElement = (selector, callback) => {
-    const el = document.querySelector(selector);
+    const el = document.getElementById('containers').querySelector(selector);
     if (el) return callback();
     const observer = new MutationObserver(() => {
-      const elNow = document.querySelector(selector);
+      const elNow = document.getElementById('containers').querySelector(selector);
       if (elNow) {
         observer.disconnect();
         callback();
       }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body.getElementById('containers'), { childList: true, subtree: true });
   };
 
   waitForElement('.commit-list', function () {

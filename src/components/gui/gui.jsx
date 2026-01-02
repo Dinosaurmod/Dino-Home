@@ -103,7 +103,7 @@ const GUIComponent = props => {
                         </React.Fragment>
                     ))}
                     <Gap size="18px" />
-                    <div style={{display: "flex"}}>
+                    <div id="containers" style={{display: "flex"}}>
                         <RecentChanges
                             intl={intl}
                             {...componentProps}
