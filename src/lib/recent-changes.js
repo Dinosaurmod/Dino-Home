@@ -61,16 +61,7 @@ $(document).ready(function () {
                     console.log('Appending commit:', message); // Debug log
 
                     $('.commit-list').append(`
-                      <li class="commit">
-                        <img src="${avatarUrl}" alt="avatar" class="avatar">
-                        <div class="commit-info">
-                          <div class="commit-title">
-                            <a href="${url}" target="_blank">${message}</a>
-                          </div>
-                          <div class="author-name">By ${authorName} (${authorLogin})</div>
-                          <div class="commit-date">${date}</div>
-                        </div>
-                      </li>
+                      
                     `);
                   });
                 }

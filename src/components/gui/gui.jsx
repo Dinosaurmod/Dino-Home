@@ -11,6 +11,7 @@ import RecentChanges from '../../containers/recent-changes.jsx';
 import Gap from '../../containers/gap.jsx';
 import SignUpGui from '../../containers/signup-gui.jsx';
 import SectionLinks from '../../containers/section-links.jsx';
+import WhatsNew from '../../containers/whats-new.jsx';
 
 import {BRAND_NAME} from '../../lib/brand.js';
 import Utils from '../../lib/utils';
@@ -93,16 +94,26 @@ const GUIComponent = props => {
                         <h1>{BRAND_NAME}</h1>
                         <p>{isExamplesPage ? Utils.formatMessage(messages.examplesPageText, intl, "Welcome to the Examples Page of DinosaurMod!") : Utils.formatMessage(messages.homePageText, intl, "Welcome to the Home Page of DinosaurMod!")}</p>
                     </section>
-                    <RecentChanges
-                        intl={intl}
-                        {...componentProps}
-                    />
-                    <Gap size="18px" />
                     {(!!isExamplesPage && (
-                        <div className="section-content">
-                            {exampleCardsArray}
-                        </div>
+                        <React.Fragment>
+                            <Gap size="18px" />
+                            <div className="section-content">
+                                {exampleCardsArray}
+                            </div>
+                        </React.Fragment>
                     ))}
+                    <Gap size="18px" />
+                    <div style={{display: "flex"}}>
+                        <RecentChanges
+                            intl={intl}
+                            {...componentProps}
+                        />
+                        <WhatsNew
+                            intl={intl}
+                            {...componentProps}
+                        />
+                    </div>
+                    <Gap size="18px" />
                     <FooterCustom
                         intl={intl}
                         {...componentProps}

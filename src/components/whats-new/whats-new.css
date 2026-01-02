@@ -34,3 +34,62 @@
     text-decoration: none;
     font-size: 14px;
 }
+
+#whats-new ul#whats-new-stuff{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#whats-new li.commit{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.dark-mode #whats-new li.commit{
+    border-bottom: 1px solid #2c2c2c;
+}
+
+#whats-new li.commit:last-child{
+    border-bottom: none;
+}
+
+#whats-new .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#whats-new .commit-info{
+    flex: 1;
+}
+
+#whats-new .commit-title a{
+    color: var(--motion-primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#whats-new .author-name{
+    font-size: 14px;
+    color: #555;
+}
+
+.dark-mode #whats-new .author-name{
+    color: #ccc;
+}
+
+#whats-new .nothing-message{
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dark-mode #whats-new .nothing-message{
+    color: #999;
+}
