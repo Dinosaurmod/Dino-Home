@@ -49,3 +49,9 @@ section.dark-mode {
     align-items: center;
     min-height: 100vh;
 }
+
+.containers {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
